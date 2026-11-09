@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wastewater Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/empowerDash/dashstyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Vendor CSS Files -->
+    <!-- Template Main CSS File -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" id="wastelink" href="/admin">EMPOWER UNLV</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link">Wastewater</a>
+        </li>
+      </ul>
+    </nav>
+    <br><br>
+
+    <section id="uploadcsv">
+      <div class="container-fluid">
+        <div class="container">
+          <p><b>Upload CSV Files</b></p>
+          <p>Sewershed Concentrations, Case Count, Variants Data</p>
+          <input type="file" id="covidfile">
+          <input type="password" id="covidtext" placeholder="Password">
+          <button id="covidbutton">Send</button>
+          <input type="checkbox" onclick="seePassCovid()"> Show Password
+          <div id="coviddiv"></div>
+          <br><br>
+
+          <!-- This path is set up to take in a full CSV, may be useful for future -->
+
+          <!--
+          <p>Variants Heatmap Data</p>
+          <input type="file" id="variantfile"/>
+          <input type="password" id="varianttext" placeholder="Password"/>
+          <button id="variantbutton">Send</button>
+          <input type="checkbox" onclick="seePassVariant()"/> Show Password
+          <div id="variantdiv"></div> 
+          -->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      window.onload = function() {
+        fetch('env_check')
+          .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          const myLink = data;
+          var url_link = myLink.data;
+          url_link = url_link + '/admin/';
+          document.getElementById('wastelink').href = url_link;
+        });
+      }
+    </script>
+    <script src = "/empowerDash/wastewater.js"></script> 
+  </body>
+</html>
+
+<!--
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" id="wastelink" href="/admin">EMPOWER UNLV</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link">Wastewater</a>
+    </li>
+  </ul>
+</nav>
+<br><br>
+<section id="uploadcsv">
+  <div class="container-fluid">
+    <div class="container">
+      <p><b>Upload CSV File</b></p>
+      <p>Sewershed Concentrations, Case Count, Variants Data</p>
+      <input type="file" id="file"/>
+      <input type="text" id="text" placeholder="Password"/>
+      <button id="button">Send</button>
+      <div id="div"></div>
+      <br><br>
+      <p>Variants Heatmap Data</p>
+      <input type="file" id="variantfile"/>
+      <input type="text" id="text" placeholder="Password"/>
+      <button id="button">Send</button>
+    </div>
+  </div>
+</section>
+-->

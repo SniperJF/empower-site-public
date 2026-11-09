@@ -1,0 +1,167 @@
+body
+{
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+}
+.weekHead
+{
+    font-size: 32px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+  }
+  
+  .flex-container > div {
+    margin: 10px;
+    flex-grow: 4;
+  }
+
+
+
+
+
+
+.box-container {
+  padding: 0;
+  margin: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  align-self: stretch;
+  justify-content: center;
+  }
+
+.box-item {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  }
+  .box-item:nth-of-type(1) { flex-grow: 1; }
+  .box-item:nth-of-type(2) { 
+    flex-grow: 2; 
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+.box-item h1 {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+.box-item h2 {
+  width: 80%;
+  text-align: right;
+  font-size: 16px;
+}
+
+ .arrow {
+    width: 0; 
+    height: 0; 
+    margin-top: 16px;
+    margin-left: 8px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    
+  }
+
+ .arrow-text {
+    margin-left: 5px;
+    margin-top: 8px;
+  }
+
+.card {
+    /**
+     * Lay out the children of this container with
+     * flexbox, which is horizontal by default.
+     */
+    display: flex;
+  
+    /**
+     * Rotate the main axis so that the children
+     * are laid out vertically.
+     */
+    flex-direction: column;
+  
+    border: 1px solid #CAD0D2;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+    .card__description {
+      /**
+       * Lay out the children of this container with
+       * flexbox.
+       */
+      display: flex;
+  
+      /**
+       * We're going to lay out this element's children
+       * just like in the "Centered prompt" example.
+       * First we'll rotate the main axis so that the
+       * children are laid out vertically.
+       */
+      flex-direction: column;
+  
+      /**
+       * Just like in the "Centered prompt", we'll
+       * group the children in the center of their
+       * container.
+       */
+      justify-content: center;
+  
+      /**
+       * And just like in the "Centered prompt" example,
+       * we'll align the children in the center, along
+       * the main axis.
+       */
+      align-items: center;
+  
+      padding: 15px 0;
+    }
+  
+      .card__descriptionIcon {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+  
+      .card__descriptionText {
+        color: #57727C;
+        font-size: 32px;
+        text-align: center;
+        justify-content: center;
+      }
+    .card_head{
+      text-align: center;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 15px;
+      border-top: 1px solid #009bd6;
+      background-color: #009bd6;
+    }
+  
+    .progress1 {
+      padding: 4px;
+      margin-left: 8px;
+      width: 95%;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+    .progress-bar1 {
+      height: 16px;
+      border-radius: 4px;
+      width: 55%;
+      background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+      background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+      background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+      background-color: #0fc0f6;
+      -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+  }
+
